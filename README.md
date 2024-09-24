@@ -67,6 +67,8 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 #3 What is the smallest and what is the largest genome in the ones you just downloaded? 
 #3A Write a command that outputs only the line with the smallest (largest) genome. 
 
+
+
 #3B How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 
 #4
