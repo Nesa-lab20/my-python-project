@@ -1,8 +1,8 @@
-#week 3 assignment
+## week 3 assignment
 
-#1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
+## 1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
 
-#2
+# 2
 #2A Copy the files (NCBI database 14 bacteria genomes) to your home directory on IBEX. 
 
   % scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
@@ -64,16 +64,18 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 
 
 
-#3 What is the smallest and what is the largest genome in the ones you just downloaded? 
+
+## 3 What is the smallest and what is the largest genome in the ones you just downloaded? 
 #3A Write a command that outputs only the line with the smallest (largest) genome. 
 
+##file ncbi_dataset/data/data_summary.tsv
 
 
 #3B How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 
-#4
+## 4
 #4A Find the number of genomes that contain at least two “c” in the species name. 
 
 #4B How many of the species names contain two or more “c” but do not contain the word “coccus”? Your command should be a single line and output a number.
 
-#5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).
+## 5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).
