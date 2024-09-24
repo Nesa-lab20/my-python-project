@@ -5,11 +5,11 @@
 # 2
 #2A Copy the files (NCBI database 14 bacteria genomes) to your home directory on IBEX. 
 
-  % scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
+% scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
 baezvg@ilogin.ibex.kaust.edu.sa's password:
 ncbi_dataset_bacterialgenome.zip                                                                                  100%   16MB   9.0MB/s   00:01
 
-  % ssh baezvg@ilogin.ibex.kaust.edu.sa
+% ssh baezvg@ilogin.ibex.kaust.edu.sa
 
 #2B Uncompress the zip file on IBEX
 [baezvg@login509-02-r ~]$ ls
@@ -70,6 +70,19 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 
 ##file ncbi_dataset/data/data_summary.tsv
 
+
+#To see the first lines and the column headers- the sizes of the genomes are in column 11
+head ncbi_dataset/data/data_summary.tsv
+
+
+% cut -f11 ncbi_dataset/data/data_summary.tsv
+
+# smallest
+% cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -n | head -n 1
+
+
+# largest 
+% cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
 
 #3B How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 
