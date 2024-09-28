@@ -2,7 +2,7 @@
 
 ## 1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
 
-# 2
+## 2
 #2A Copy the files (NCBI database 14 bacteria genomes) to your home directory on IBEX. 
 
 % scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
