@@ -12,7 +12,7 @@ ncbi_dataset_bacterialgenome.zip                                                
 % ssh baezvg@ilogin.ibex.kaust.edu.sa
 
 #2B Uncompress the zip file on IBEX
-[baezvg@login509-02-r ~]$ ls
+  % ls
 count_genes.py  ecoliGC2.py           genomes                           ncbi_dataset.zip      sorted-genomes.txt  submit_ibex.sh
 ecoli.faa       extracted_gene.fasta  grep                              read_ecoli.py         sorted-list.txt     translated_gene.fasta
 ecoli.fasta     GCecoli.py            in_class                          script2.py            sorted_list.txt     translated.py
@@ -20,7 +20,7 @@ ecoli.fna       genepick.py           my-python                         script.p
 ecoli.gbk       genome-lenghts.txt    ncbi_dataset_bacterialgenome.zip  seq_utils_example.py  SRR30669799.fastq
 
 
-[baezvg@login509-02-r ~]$ unzip ncbi_dataset_bacterialgenome.zip
+  % unzip ncbi_dataset_bacterialgenome.zip
 Archive:  ncbi_dataset_bacterialgenome.zip
   inflating: README.md
   inflating: ncbi_dataset/data/data_summary.tsv
@@ -69,26 +69,48 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 #3A Write a command that outputs only the line with the smallest (largest) genome. 
 
 ##file ncbi_dataset/data/data_summary.tsv
+#To see the first lines and the column headers
+  % head ncbi_dataset/data/data_summary.tsv
 
+#- the sizes of the genomes are in column 11
+  % cut -f11 ncbi_dataset/data/data_summary.tsv
 
-#To see the first lines and the column headers- the sizes of the genomes are in column 11
-head ncbi_dataset/data/data_summary.tsv
+#3A.1 Find the smallest genome and output the entire line:
+  % cat ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -t $'\t' -k11,11n | head -n 1
 
+  #output = Chlamydia trachomatis D/UW-3/CX         strain: D/UW-3/CX       272561  ASM872v1        GCA_000008725.1 GenBank Annotation submitted by ChGP    Complete Genome     1042519 1042519 2001-01-09      939     PRJNA45 SAMN02603114
 
-% cut -f11 ncbi_dataset/data/data_summary.tsv
+#3A.2. Find the largest genome and output the entire line:
+  % cat ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -t $'\t' -k11,11nr | head -n 1
 
-# smallest
-% cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -n | head -n 1
-
-
-# largest 
-% cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
+  #output= Vibrio cholerae O1 biovar El Tor str. N16961            strain: N16961  243277  ASM674v1        GCA_000006745.1 GenBank Annotation submitted by TIGRComplete Genome 2961149 4033464 2001-01-09      4007    PRJNA36 SAMN02603969
 
 #3B How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 
+#3B.1. Output only the genome size (smallest genome):
+   %cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -n | head -n 1
+
+   #output:1042519
+
+#3B.2. Output only the genome size (largest genome):
+   %cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
+
+   #output=4033464
+
 ## 4
-#4A Find the number of genomes that contain at least two “c” in the species name. 
+#4A Find the number of genomes that contain at least two “c” in the species name.   
+  % grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | wc -l
+
+  output=29
+
 
 #4B How many of the species names contain two or more “c” but do not contain the word “coccus”? Your command should be a single line and output a number.
+  %grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | grep -vi 'coccus' | wc -l
+
+  output=25
 
 ## 5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).
+
+%find ncbi_dataset/data -type f -name "*.fna" -size +3M | wc -l
+
+output=6
