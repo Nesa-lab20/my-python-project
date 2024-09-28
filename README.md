@@ -78,24 +78,24 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 #3A.1 Find the smallest genome and output the entire line:
   % cat ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -t $'\t' -k11,11n | head -n 1
 
-  #output = Chlamydia trachomatis D/UW-3/CX         strain: D/UW-3/CX       272561  ASM872v1        GCA_000008725.1 GenBank Annotation submitted by ChGP    Complete Genome     1042519 1042519 2001-01-09      939     PRJNA45 SAMN02603114
+  output = Chlamydia trachomatis D/UW-3/CX         strain: D/UW-3/CX       272561  ASM872v1        GCA_000008725.1 GenBank Annotation submitted by ChGP    Complete Genome     1042519 1042519 2001-01-09      939     PRJNA45 SAMN02603114
 
 #3A.2. Find the largest genome and output the entire line:
   % cat ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -t $'\t' -k11,11nr | head -n 1
 
-  #output= Vibrio cholerae O1 biovar El Tor str. N16961            strain: N16961  243277  ASM674v1        GCA_000006745.1 GenBank Annotation submitted by TIGRComplete Genome 2961149 4033464 2001-01-09      4007    PRJNA36 SAMN02603969
+  output= Vibrio cholerae O1 biovar El Tor str. N16961            strain: N16961  243277  ASM674v1        GCA_000006745.1 GenBank Annotation submitted by TIGRComplete Genome 2961149 4033464 2001-01-09      4007    PRJNA36 SAMN02603969
 
 #3B How large are these genomes? Expand your command to output only the genome size. (Note: You should use shell commands, not write a Python program.)
 
 #3B.1. Output only the genome size (smallest genome):
    %cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -n | head -n 1
 
-   #output:1042519
+   output:1042519
 
 #3B.2. Output only the genome size (largest genome):
    %cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
 
-   #output=4033464
+   output=4033464
 
 ## 4
 #4A Find the number of genomes that contain at least two “c” in the species name.   
