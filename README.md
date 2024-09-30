@@ -4,15 +4,19 @@
 
 ## 2
 #2A Copy the files (NCBI database 14 bacteria genomes) to your home directory on IBEX. 
+
+```  
+scp .\Downloads\ncbi_dataset_bacterialgenome.zip username@ilogin.ibex.kaust.edu.sa:~/
+
   
-scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
-baezvg@ilogin.ibex.kaust.edu.sa's password:
-ncbi_dataset_bacterialgenome.zip                                                                                  100%   16MB   9.0MB/s   00:01
-  
-% ssh baezvg@ilogin.ibex.kaust.edu.sa
+% ssh username@ilogin.ibex.kaust.edu.sa
+
+```
 
 #2B Uncompress the zip file on IBEX  
+```
   % ls
+```
 count_genes.py  ecoliGC2.py           genomes                           ncbi_dataset.zip      sorted-genomes.txt  submit_ibex.sh
 ecoli.faa       extracted_gene.fasta  grep                              read_ecoli.py         sorted-list.txt     translated_gene.fasta
 ecoli.fasta     GCecoli.py            in_class                          script2.py            sorted_list.txt     translated.py
