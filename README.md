@@ -127,7 +127,7 @@ grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | grep -vi 'coccus' | wc -l
   output=25
 
 ## 5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).  
-
+```
 %find ncbi_dataset/data -type f -name "*.fna" -size +3M | wc -l
-
+```
 output=6
