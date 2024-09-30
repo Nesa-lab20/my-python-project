@@ -18,11 +18,7 @@ Check first what you have in your Terminal
 ```
 ls
 ```
-count_genes.py  ecoliGC2.py           genomes                           ncbi_dataset.zip      sorted-genomes.txt  submit_ibex.sh
-ecoli.faa       extracted_gene.fasta  grep                              read_ecoli.py         sorted-list.txt     translated_gene.fasta
-ecoli.fasta     GCecoli.py            in_class                          script2.py            sorted_list.txt     translated.py
-ecoli.fna       genepick.py           my-python                         script.py             SRR30669799
-ecoli.gbk       genome-lenghts.txt    ncbi_dataset_bacterialgenome.zip  seq_utils_example.py  SRR30669799.fastq
+#Now unzip
 
 ```
 unzip ncbi_dataset_bacterialgenome.zip
