@@ -74,7 +74,10 @@ GCA_000006745.1             GCA_000008525.1  GCA_000008625.1  GCA_000027305.1  G
 ## 3 What is the smallest and what is the largest genome in the ones you just downloaded?     
 #3A Write a command that outputs only the line with the smallest (largest) genome. 
 
-##file ncbi_dataset/data/data_summary.tsv  
+##file that has the information without opening every single file 
+```
+ncbi_dataset/data/data_summary.tsv
+```
 #To see the first lines and the column headers  
 ```
 head ncbi_dataset/data/data_summary.tsv
