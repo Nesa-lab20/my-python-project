@@ -2,7 +2,7 @@
 
 #1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
 
-# 2
+#2
 % scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
 baezvg@ilogin.ibex.kaust.edu.sa's password:
 ncbi_dataset_bacterialgenome.zip                                                                                  100%   16MB   9.0MB/s   00:01
@@ -44,7 +44,7 @@ ncbi_dataset_bacterialgenome.zip                                                
 #4B How many of the species names contain two or more “c” but do not contain the word “coccus”? Your command should be a single line and output a number.
 %grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | grep -vi 'coccus' | wc -l
 
-# 5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).
+#5 Use the find command to find all genome files (FASTA) larger than 3 megabyte. How many are there (output only the number).
 
 %find ncbi_dataset/data -type f -name "*.fna" -size +3M | wc -l
 
