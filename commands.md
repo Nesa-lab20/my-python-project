@@ -1,8 +1,8 @@
 ## week 3 assignment
 
-## 1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
+#1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
 
-## 2
+# 2
 % scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
 baezvg@ilogin.ibex.kaust.edu.sa's password:
 ncbi_dataset_bacterialgenome.zip                                                                                  100%   16MB   9.0MB/s   00:01
@@ -38,7 +38,6 @@ ncbi_dataset_bacterialgenome.zip                                                
 #3B.2. Output only the genome size (largest genome):
 %cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
 
-## 4
 #4A Find the number of genomes that contain at least two “c” in the species name.   
 % grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | wc -l
 
