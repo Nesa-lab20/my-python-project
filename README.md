@@ -5,7 +5,7 @@
 ## 2
 #2A Copy the files (NCBI database 14 bacteria genomes) to your home directory on IBEX. 
   
-% scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
+scp .\Downloads\ncbi_dataset_bacterialgenome.zip baezvg@ilogin.ibex.kaust.edu.sa:~/
 baezvg@ilogin.ibex.kaust.edu.sa's password:
 ncbi_dataset_bacterialgenome.zip                                                                                  100%   16MB   9.0MB/s   00:01
   
