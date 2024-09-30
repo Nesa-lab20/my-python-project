@@ -1,4 +1,4 @@
-## week 3 assignment
+## Week 3 assignment
 
 ## 1 Write the README file containing all commands you run to complete these tasks, and their output, and commit the README to a new repository (my-python-project)
 
