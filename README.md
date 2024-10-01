@@ -115,8 +115,7 @@ cut -f11 ncbi_dataset/data/data_summary.tsv | tail -n +2 | sort -nr | head -n 1
 ## 4
 #4A Find the number of genomes that contain at least two “c” in the species name.   
 ```
-find ncbi_dataset/data -type f -name "GCA*.fna" -exec grep -qi 'c.*c' {} + -print | sort | uniq | wc
- -l```
+find ncbi_dataset/data -type f -name "GCA*.fna" -exec grep -qi 'c.*c' {} + -print | sort | uniq | wc -l ```
   output=14
 
 
