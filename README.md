@@ -119,11 +119,16 @@ find ncbi_dataset/data -type f -name "GCA*.fna" -exec grep -qi 'c.*c' {} + -prin
 ```
   output=14
 
+```
+grep -E 'GCA' /home/baezvg/ncbi_dataset/data/data_summary.tsv | grep -E 'c.*c' | wc -l
+```
+OUTPUT:7
 
 #4B How many of the species names contain two or more “c” but do not contain the word “coccus”? Your command should be a single line and output a number.  
 
 ```
 grep -i 'c.*c' ncbi_dataset/data/data_summary.tsv | grep -vi 'coccus' | wc -l
+
 ```
   output=5
 
